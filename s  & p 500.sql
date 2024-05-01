@@ -38,3 +38,12 @@ SELECT Sector,MIN(StockPrice) AS MinStockPrice,MAX(StockPrice) as StockPrice
   FROM [snp500].[dbo].[CompanyBySector]
   GROUP BY Sector
   GO
+
+-- Get the stock price above above 100 in the nformation technology sector
+SELECT *
+  FROM [snp500].[dbo].[CompanyBySector]
+  WHERE 
+  StockPrice >1000
+  AND
+  Sector = 'Information Technology'
+  GO
