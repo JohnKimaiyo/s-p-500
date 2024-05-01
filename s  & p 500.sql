@@ -13,3 +13,10 @@ ROWTERMINATOR = '\n',
 TABLOCK
 )
 GO
+
+-- Get the number of companies per sector
+SELECT  Sector, COUNT(*) AS Number
+  FROM [snp500].[dbo].[CompanyBySector]
+  GROUP BY Sector
+  GO
+
