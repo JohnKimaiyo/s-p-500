@@ -20,3 +20,7 @@ SELECT  Sector, COUNT(*) AS Number
   GROUP BY Sector
   GO
 
+-- Get the highest stock Price 
+ SELECT MAX(StockPrice) AS Highest_Stock_Price
+  FROM [snp500].[dbo].[CompanyBySector]
+  GO
