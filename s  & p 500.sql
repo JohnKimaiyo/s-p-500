@@ -30,3 +30,11 @@ SELECT  Sector, COUNT(*) AS Number
 SELECT MIN(StockPrice) AS Lowest_Stock_Price
   FROM [snp500].[dbo].[CompanyBySector]
   GO
+  
+
+  -- Get the Minimum and maximum stock rice in each sector
+  
+SELECT Sector,MIN(StockPrice) AS MinStockPrice,MAX(StockPrice) as StockPrice
+  FROM [snp500].[dbo].[CompanyBySector]
+  GROUP BY Sector
+  GO
