@@ -24,3 +24,9 @@ SELECT  Sector, COUNT(*) AS Number
  SELECT MAX(StockPrice) AS Highest_Stock_Price
   FROM [snp500].[dbo].[CompanyBySector]
   GO
+
+
+-- get the lowest stock price
+SELECT MIN(StockPrice) AS Lowest_Stock_Price
+  FROM [snp500].[dbo].[CompanyBySector]
+  GO
