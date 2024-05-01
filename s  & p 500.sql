@@ -3,10 +3,13 @@ CREATE DATABASE snp500
 GO
 
 
-CREATE TABLE CompanyBySector
-(Ticker varchar(5)
-,CompanyName varchar (50)
-,Sector varchar(50)
-,StockPrice decimal(6,2)
+BULK INSERT CompanyBySector
+FROM 'C:\Users\jki\Downloads\1.1 snp500-company-by-sector.csv.csv' 
+WITH
+(
+FIRSTROW = 2,
+FIELDTERMINATOR = ';',
+ROWTERMINATOR = '\n',
+TABLOCK
 )
 GO
