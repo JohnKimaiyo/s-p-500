@@ -80,3 +80,15 @@ SELECT *
 	  INSERT INTO tableB_CompanyNames  VALUES('CMCA','Comcast Corp')
 	    INSERT INTO tableB_CompanyNames  VALUES('DG','Ford Motor')
 		GO
+
+
+    CREATE TABLE tableA_Stocks
+(CompanyName varchar(50)
+, stockPrice decimal(6,2)
+)
+GO
+
+INSERT INTO tableA_Stocks VALUES ('Amazon.com Inc',350.5)
+INSERT INTO tableA_Stocks VALUES ('Best Buy Co.Inc',68.79)
+INSERT INTO tableA_Stocks VALUES ('Comcast Corp',38.19)
+GO
