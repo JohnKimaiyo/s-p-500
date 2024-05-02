@@ -117,3 +117,9 @@ SELECT * FROM tableA_Stocks
 INTERSECT
 SELECT * FROM tableB_Stocks
 GO
+
+-- getting unique values
+SELECT * FROM tableA_Stocks
+EXCEPT
+SELECT * FROM tableB_Stocks
+GO
