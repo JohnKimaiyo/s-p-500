@@ -107,3 +107,8 @@ GO
 SELECT * FROM tableA_Stocks
 SELECT * FROM tableB_Stocks
 GO
+
+SELECT * FROM tableA_Stocks
+UNION
+SELECT * FROM tableB_Stocks
+GO
