@@ -47,3 +47,36 @@ SELECT *
   AND
   Sector = 'Information Technology'
   GO
+
+  SELECT TOP (1000) [Ticker]
+      ,[CompanyName]
+      ,[Sector]
+      ,[StockPrice]
+  FROM [snp500].[dbo].[CompanyBySector]
+
+  CREATE TABLE tableA_CompanyStockPrices
+  (Ticker varchar(5)
+  ,stockPrice decimal(6,2)
+  )
+  GO
+
+
+
+  INSERT INTO tableA_CompanyStockPrices VALUES('AMZN',350.5)
+    INSERT INTO tableA_CompanyStockPrices VALUES('BBY',350.5)
+	  INSERT INTO tableA_CompanyStockPrices VALUES('CMCA',350.5)
+	    INSERT INTO tableA_CompanyStockPrices VALUES('DG',350.5)
+		GO
+
+
+		CREATE TABLE tableB_CompanyNames
+		(Ticker varchar(5)
+		,CompanyName varchar(50)
+		)
+		GO
+		
+  INSERT INTO tableB_CompanyNames VALUES('AMZN','Amazon.com')
+    INSERT INTO tableB_CompanyNames  VALUES('BBY','Best Buy Co.Ic')
+	  INSERT INTO tableB_CompanyNames  VALUES('CMCA','Comcast Corp')
+	    INSERT INTO tableB_CompanyNames  VALUES('DG','Ford Motor')
+		GO
