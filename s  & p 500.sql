@@ -185,3 +185,7 @@ SELECT RowDateRecord
 ,TRY_CONVERT(date,RowDateRecord) AS DateCONVERT
 ,TRY_PARSE(RowDateRecord AS date) AS DateParse
 FROM DateRecords
+
+CREATE TABLE TimeRecords
+(record varchar(max))
+GO
