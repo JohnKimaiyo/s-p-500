@@ -129,3 +129,11 @@ SELECT Sector, AVG(StockPrice) AS StockAverage
  FROM [snp500].[dbo].[CompanyBySector]
 GROUP BY Sector
 GO
+
+--get the average stock price per sector above 100 stoc price
+SELECT Sector, AVG(StockPrice) AS StockAverage
+FROM [snp500].[dbo].[CompanyBySector]
+GROUP BY Sector
+HAVING AVG(StockPrice) >100
+ORDER BY StockAverage ASC
+GO
