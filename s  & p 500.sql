@@ -92,3 +92,18 @@ INSERT INTO tableA_Stocks VALUES ('Amazon.com Inc',350.5)
 INSERT INTO tableA_Stocks VALUES ('Best Buy Co.Inc',68.79)
 INSERT INTO tableA_Stocks VALUES ('Comcast Corp',38.19)
 GO
+
+CREATE TABLE tableB_Stocks
+(CompanyName varchar(50)
+, stockPrice decimal(6,2)
+)
+GO
+
+INSERT INTO tableB_Stocks VALUES ('Amazon.com Inc',350.5)
+INSERT INTO tableB_Stocks VALUES ('Best Buy Co.Inc',68.79)
+INSERT INTO tableB_Stocks VALUES ('Ford Moor',10.43)
+GO
+
+SELECT * FROM tableA_Stocks
+SELECT * FROM tableB_Stocks
+GO
