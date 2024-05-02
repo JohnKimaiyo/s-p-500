@@ -148,3 +148,9 @@ SELECT DISTINCT Sector, COUNT(CompanyName) OVER (PARTITION BY Sector) AS Company
 FROM [snp500].[dbo].[CompanyBySector]
 ORDER BY CompanyCount DESC
 GO
+
+-- rank THE COMMPANIES BY STOCK PRICE  and indcatae stock price--
+SELECT CompanyName, StockPrice,Sector,RANK() OVER (PARTITION BY Sector ORDER BY StockPrice) AS StockPriceRank
+FROM [snp500].[dbo].[CompanyBySector]
+
+GO
