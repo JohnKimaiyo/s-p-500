@@ -194,3 +194,8 @@ INSERT INTO TimeRecords VALUES ('09:01:03')
 INSERT INTO TimeRecords VALUES ('17:15:00')
 INSERT INTO TimeRecords VALUES ('11:45:24')
 GO
+SELECT DATEPART(hour,TRY_PARSE(record as time))AS hours
+		,DATEPART(minute,TRY_PARSE(record as time)) AS minutes
+		,DATEPART(minute,TRY_PARSE(record as time)) AS seconds
+FROM TimeRecords
+GO
