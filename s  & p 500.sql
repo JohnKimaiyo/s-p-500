@@ -163,3 +163,18 @@ GO
 SELECT CompanyName, StockPrice,Sector,NTILE(4) OVER (PARTITION BY Sector ORDER BY StockPrice) AS StockPriceTile
 FROM [snp500].[dbo].[CompanyBySector]
 GO
+
+--  dataes---
+CREATE TABLE DateRecords
+(RowDateRecord varchar(max))
+GO
+
+INSERT INTO DateRecords VALUES ('1/27/2018')
+INSERT INTO DateRecords VALUES ('2018-01-27')
+INSERT INTO DateRecords VALUES ('27-Jan-18')
+INSERT INTO DateRecords VALUES ('27-Jan-2018')
+INSERT INTO DateRecords VALUES ('January 27,2018')
+INSERT INTO DateRecords VALUES ('Saturday,January 27,2018')
+INSERT INTO DateRecords VALUES ('1/27/18 12:00 AM')
+INSERT INTO DateRecords VALUES ('27 tammikuuta 2018 0:00')
+GO
