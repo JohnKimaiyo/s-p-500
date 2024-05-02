@@ -189,3 +189,8 @@ FROM DateRecords
 CREATE TABLE TimeRecords
 (record varchar(max))
 GO
+
+INSERT INTO TimeRecords VALUES ('09:01:03')
+INSERT INTO TimeRecords VALUES ('17:15:00')
+INSERT INTO TimeRecords VALUES ('11:45:24')
+GO
