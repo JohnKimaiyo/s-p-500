@@ -213,3 +213,6 @@ SELECT POWER(4,0.5) AS Number_4_in_power_of_o_point_s
 SELECT POWER(2,2) AS Number_2_in_power_of_2
 GO
 
+SELECT LOG(22026.465890) AS Natural_Logarithm
+SELECT LOG10(100) AS Base_10_logarithm
+GO
