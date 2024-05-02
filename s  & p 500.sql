@@ -203,3 +203,11 @@ GO
 SELECT RAND(100) AS Random_numner_with_seed_100
 SELECT RAND() Random_number_with_random_random_seed
 GO
+
+SELECT EXP(10) AS Exponent_of_10
+SELECT SQRT(4) AS Square_root_of_4
+SELECT SQUARE(2) AS Square_of_2
+SELECT POWER(4,0.5) AS Number_4_in_power_of_o_point_s
+SELECT POWER(2,2) AS Number_2_in_power_of_2
+GO
+
