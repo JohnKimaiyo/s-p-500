@@ -142,3 +142,9 @@ GO
 SELECT CompanyName,StockPrice, Sector, AVG(StockPrice) OVER (PARTITION BY Sector) AS AverageStockPrice
 FROM [snp500].[dbo].[CompanyBySector]
 GO
+
+-- get the number of comapny  per sector in descending order
+SELECT DISTINCT Sector, COUNT(CompanyName) OVER (PARTITION BY Sector) AS CompanyCount
+FROM [snp500].[dbo].[CompanyBySector]
+ORDER BY CompanyCount DESC
+GO
