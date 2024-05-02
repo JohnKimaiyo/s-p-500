@@ -154,3 +154,7 @@ SELECT CompanyName, StockPrice,Sector,RANK() OVER (PARTITION BY Sector ORDER BY 
 FROM [snp500].[dbo].[CompanyBySector]
 
 GO
+-- row number--
+SELECT CompanyName, StockPrice,Sector,ROW_NUMBER() OVER (PARTITION BY Sector ORDER BY StockPrice) AS StockPriceRank
+FROM [snp500].[dbo].[CompanyBySector]
+GO
