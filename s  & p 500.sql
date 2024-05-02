@@ -123,3 +123,9 @@ SELECT * FROM tableA_Stocks
 EXCEPT
 SELECT * FROM tableB_Stocks
 GO
+
+-- get the average stock price oer sector
+SELECT Sector, AVG(StockPrice) AS StockAverage
+ FROM [snp500].[dbo].[CompanyBySector]
+GROUP BY Sector
+GO
