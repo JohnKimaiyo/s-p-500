@@ -178,3 +178,10 @@ INSERT INTO DateRecords VALUES ('Saturday,January 27,2018')
 INSERT INTO DateRecords VALUES ('1/27/18 12:00 AM')
 INSERT INTO DateRecords VALUES ('27 tammikuuta 2018 0:00')
 GO
+
+
+SELECT RowDateRecord
+,TRY_CAST(RowDateRecord AS date) AS DateCAST
+,TRY_CONVERT(date,RowDateRecord) AS DateCONVERT
+,TRY_PARSE(RowDateRecord AS date) AS DateParse
+FROM DateRecords
