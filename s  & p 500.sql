@@ -200,6 +200,8 @@ SELECT DATEPART(hour,TRY_PARSE(record as time))AS hours
 FROM TimeRecords
 GO
 
+
+-- mathematical operations -- 
 SELECT RAND(100) AS Random_numner_with_seed_100
 SELECT RAND() Random_number_with_random_random_seed
 GO
