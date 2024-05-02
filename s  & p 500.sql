@@ -158,3 +158,8 @@ GO
 SELECT CompanyName, StockPrice,Sector,ROW_NUMBER() OVER (PARTITION BY Sector ORDER BY StockPrice) AS StockPriceRank
 FROM [snp500].[dbo].[CompanyBySector]
 GO
+
+-- ntile--
+SELECT CompanyName, StockPrice,Sector,NTILE(4) OVER (PARTITION BY Sector ORDER BY StockPrice) AS StockPriceTile
+FROM [snp500].[dbo].[CompanyBySector]
+GO
