@@ -112,3 +112,8 @@ SELECT * FROM tableA_Stocks
 UNION
 SELECT * FROM tableB_Stocks
 GO
+-- GET ON SIMILAR
+SELECT * FROM tableA_Stocks
+INTERSECT
+SELECT * FROM tableB_Stocks
+GO
