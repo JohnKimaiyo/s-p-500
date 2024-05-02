@@ -149,7 +149,7 @@ FROM [snp500].[dbo].[CompanyBySector]
 ORDER BY CompanyCount DESC
 GO
 
--- rank THE COMMPANIES BY STOCK PRICE  and indcatae stock price--
+-- rank  the comapnies by  stock price  and indicate stock price--
 SELECT CompanyName, StockPrice,Sector,RANK() OVER (PARTITION BY Sector ORDER BY StockPrice) AS StockPriceRank
 FROM [snp500].[dbo].[CompanyBySector]
 
