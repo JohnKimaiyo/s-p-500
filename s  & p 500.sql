@@ -216,3 +216,21 @@ GO
 SELECT LOG(22026.465890) AS Natural_Logarithm
 SELECT LOG10(100) AS Base_10_logarithm
 GO
+
+
+DECLARE @KidAges table
+(age int
+,name varchar(max)
+)
+
+INSERT INTO @KidAges VALUES(10,'any')
+INSERT INTO @KidAges VALUES(12,'krista')
+INSERT INTO @KidAges VALUES(14,'email')
+
+DECLARE @email_age int
+
+SET @email_age = (SELECT age FROM @kidAges WHERE name = 'email')
+
+SELECT @email_age
+SELECT * FROM @kidAges
+GO
